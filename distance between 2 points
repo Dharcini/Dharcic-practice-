@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+#include<iomanip>
+using namespace std;
+float dist(float x1,float y1,float x2,float y2)
+{
+    float b=(x2-x1)*(x2-x1);//cout<<b<<endl;
+    float d=(y2-y1)*(y2-y1);//cout<<d<<endl;
+    float a=sqrt(b+d); //cout<<a<<endl;
+    return(a);
+}
+int main()
+{
+    float x1,y1,x2,y2;
+    cin>>x1>>y1>>x2>>y2;
+    float c = dist(x1,y1,x2,y2);
+    //cout<<c;
+    cout<<"Distance between the 2 points is "<<fixed<<setprecision(2)<<c;
+}
