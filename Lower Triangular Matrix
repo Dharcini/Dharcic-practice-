@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,n,b,count=0;
+    cin>>n;
+    int a[n][n];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    for(i=0;i<n-1;i++)
+    {
+        for(j=1;j<n;j++)
+        {
+            if(a[i][j]==0)
+            {
+                count+=1;
+            }
+            else
+            {
+                count+=0;
+            }
+        }
+    }
+    if(count>=n)
+    {
+        cout<<"Lower triangular matrix";
+    }
+    else
+    {
+        cout<<"Not a Lower Triangular Matrix";
+    }
+}
