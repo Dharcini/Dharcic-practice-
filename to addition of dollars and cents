@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int d1,c1,d2,c2,a,count=0;
+    cin>>d1>>c1>>d2>>c2;
+    int c=c1+c2;
+    int d=d1+d2;
+    while(c>100)
+    {
+        a=c%100;
+        count+=1;
+        c=c-100;
+    }
+    cout<<d+count<<endl<<c;
+}
