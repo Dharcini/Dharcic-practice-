@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int n,sum=0;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+        int temp=sqrt(a[i]);
+        if(a[i]==(temp*temp))
+        {
+            sum+=a[i];
+        }
+    }
+    cout<<sum;
+}
