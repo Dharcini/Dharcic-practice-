@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int c,i,a,n,sum=0;
+    cin>>n;
+    c=n;
+    while(n!=0)
+    {
+        int a=n%10;
+        sum+=a;
+        n=n/10;
+    }
+    if(c%sum==0)
+    {
+        cout<<"Harshard number";
+    }
+    else
+    {
+        cout<<"Not Harshard number";
+    }
+}
