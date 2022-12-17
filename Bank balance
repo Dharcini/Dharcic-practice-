@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int acc,ch,amt;
+    cin>>acc>>ch>>amt;
+    switch(ch)
+    {
+        case 1 :
+        {
+            cout<<acc+amt;
+            break;
+        }
+        case 2 :
+        {
+            if(amt>acc)
+            {
+                cout<<"Insufficient Balance";
+            }
+            else
+            {
+                cout<<acc-amt;
+            }
+            break;
+        }
+        default :
+        {
+            cout<<"Invalid Input";
+            break;
+        }
+    }
+}
