@@ -1,0 +1,45 @@
+//Zack is going to celebrate his birthday on January. His father wants to buy a new dress for his son. As they are Christian, he also wants to buy new dress for Christmas. As all the textile showrooms offers discount on the month of December his father decides to buy dress for Zack's birthday in December itself. Before that he wants to know how much discounts they give on each month. In the first month of the year they offer 20% discount. In the third and fourth month they offer 10% discount. In the sixth and seventh month they offer 75% discount. In the tenth and eleventh month they offer 30% discount. In the twelfth moth they offer 35% discount. Implement this program using switch.
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    int amt,mon;
+    float d,pay;
+    cin>>amt>>mon;
+    if(mon==1)
+    {
+        d=amt*0.2;
+        pay=amt-d;
+        cout<<"Zack's father needs to pay Rs."<<fixed<<setprecision(2)<<pay;
+    }
+    else if(mon==3 || mon==4)
+    {
+        d=amt*0.1;
+        pay=amt-d;
+        cout<<"Zack's father needs to pay Rs."<<fixed<<setprecision(2)<<pay;
+    }
+    else if(mon==6 || mon==7)
+    {
+        d=amt*0.75;
+        pay=amt-d;
+        cout<<"Zack's father needs to pay Rs."<<fixed<<setprecision(2)<<pay;
+    }
+    else if(mon==10 || mon==11)
+    {
+        d=amt*0.3;
+        pay=amt-d;
+        cout<<"Zack's father needs to pay Rs."<<fixed<<setprecision(2)<<pay;
+    }
+    else if(mon==12)
+    {
+        d=amt*0.35;
+        pay=amt-d;
+        cout<<"Zack's father needs to pay Rs."<<fixed<<setprecision(2)<<pay;
+    }
+    else
+    {
+        pay=amt;
+        cout<<"Zack's father needs to pay Rs."<<fixed<<setprecision(2)<<pay;
+    }
+}
