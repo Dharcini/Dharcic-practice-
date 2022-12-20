@@ -1,0 +1,83 @@
+//Dutch and Nora are close friends. They both are studying in same school. Now they are in summer vacation. As they feel very bore, they ask their parents to take them to an exhibition. There Dutch and Nora play a game. There are three boxes with some number written on their top. There is a treasure in one of the three boxes, which has second largest number on its top. They want to type some code to open the box which has a treasure. They want to find the code correctly to open the box. The clue given to them to find the code is the largest number which divide the all the three given numbers.
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,temp=0;
+    cin>>a>>b>>c;
+    if(c>a && c>b && c!=a)
+    {
+        if(a>b)
+        {
+            temp=a;
+            a=b;
+            b=a;
+        }
+    }
+    else if(b>a && b>c && b!=a)
+    {
+        temp=b;
+        if(c>a)
+        {
+            b=c;
+            c=temp;
+        }
+        else
+        {
+            b=a;
+            a=c;
+            c=temp;
+        }
+    }
+    else if(a>b && a>c && a!=c)
+    {
+        temp=a;
+        if(c>b)
+        {
+            a=b;
+            b=c;
+            c=temp;
+        }
+        else
+        {
+            a=c;
+            c=temp;
+        }
+    }
+    else if(a==b || a==c)
+    {
+        if(a==b && a>c)
+        {
+            temp=c;
+            c=a;
+            a=c;
+        }
+        else if(a==c && a>b)
+        {
+            temp=b;
+            b=a;
+            a=temp;
+        }
+    }
+    
+    cout<<"The treasure is in box which has number "<<b<<"."<<endl;
+    if(a!=c && b!=c)
+    {
+        if(a>b && a!=c)
+        {
+            cout<<"The code to open the box is "<<a-b<<".";
+        }
+        else if(c>b && a!=c)
+        {
+            cout<<"The code to open the box is "<<c-b<<".";
+        }
+        else
+        {
+            cout<<"The code to open the box is "<<a-c<<".";
+        }
+    }
+    else
+    {
+        cout<<"The code to open the box is 1.";
+    }
+}
